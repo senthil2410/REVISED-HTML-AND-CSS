@@ -1,0 +1,46 @@
+/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+section {
+    flex: 3;
+    padding: 10px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+aside {
+    flex: 1;
+    padding: 10px;
+}
+
+.external
+{
+    background-color: bisque;
+    color: blue;
+}

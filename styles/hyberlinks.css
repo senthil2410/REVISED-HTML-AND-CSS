@@ -1,0 +1,26 @@
+
+
+nav{
+    display:flex;
+    text-decoration: none;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+    justify-content: end;
+    background: 100vh;
+    background-color: aquamarine;
+     
+}
+li{
+    padding: 10px;
+    
+}

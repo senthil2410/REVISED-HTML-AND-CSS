@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <meta name="description"   content="shadow dom">
+        
+    </head>
+    <body>
+       <div id="host"></div>
+       <span>not in shadow DOM</span>
+
+       <button id="upper" type="submit">UPPER</button>
+       <button  id="reset" type="submit">RESET</button>
+    </body>
+    <script>
+           const host=document.querySelector("#host");
+           const shadow=host.attachShadow({mode:"open"});
+
+           const span=document.createElement("span");
+           span.innerText="I'm inside shadow DOM";
+           shadow.appendChild(span);
+
+           const upper=document.querySelector("button#upper");
+           upper.addEventListener("click",()=>
+        {
+            const spans=document.querySelectorAll("span");
+
+            spans.forEach((span)=>
+           {
+                span.innerText=span.innerText.toUpperCase();
+           })
+        })
+
+       const reset=document.querySelector("#reset");
+
+         reset.addEventListener("click",()=>
+        {
+            location.reload();
+        })
+
+    </script>
+</html>
