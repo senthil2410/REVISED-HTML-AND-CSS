@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+         <title>View Events</title>
+    </head>
+    <body>
+                <div>
+                <input type="text" id="username" name="username" > 
+                </div>
+                <div>
+                <input type="email" id="email" name="email" > 
+                </div>
+    </body>
+    <script>
+            const email=document.getElementById("email");
+
+            email.addEventListener("blur",(event)=>
+        {
+            event.target.style.background="grey"
+        })
+
+
+            email.addEventListener("focus",(event)=>
+        {
+            event.target.style.background="blue"
+        })
+    </script>
+</html>

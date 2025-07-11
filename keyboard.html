@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="this page is about Keyboradevents">
+        <link rel="icon" href="/imgaes/favicon.jpg" type="image/x-icon">
+        <title>Key-Board Events</title>
+    </head>
+    <body>
+        <input type="text" id="input" class="input" placeholder="type">
+        <p id="output"></p>
+    </body>
+
+    <script>
+
+      const input=document.getElementById('input');
+      const output=document.getElementById('output');
+
+
+
+      input.addEventListener("keydown",(event)=>
+    {
+        if(event.ctrlKey)
+      {
+           switch(event.key.toLowerCase())
+           {
+               case 's':
+                 event.preventDefault();
+               
+                 output.textContent=`ctrl key is pressed along with ${event.key} to save the document`;
+                 break;
+    
+                 return;
+                 case 'p':
+                 event.preventDefault();
+               
+                 output.textContent=`ctrl key is pressed along with ${event.key} to print the document`;
+                 break;
+                 return;
+                 default:
+
+           }
+      }else
+      {
+      output.textContent=`${event.key} ia a pressed  and Event code is (code:${event.code})`;
+      }
+    })
+
+    
+
+     input.addEventListener("keyup",(event)=>
+      {
+        output.textContent=`${event.key} ia a released  and Event code is (code:${event.code})`;
+      })
+
+
+        </script>
+</html>

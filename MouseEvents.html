@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Events</title>
+
+        <style>
+            .event
+            {
+                height: 500px;
+                width:500px;
+                background-color: black;
+            }
+            .output
+            {
+                text-align: center;
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="event">
+        <div class="output"></div>
+       </div>
+    </body>
+
+
+    <script>
+        const pointer=document.querySelector('.event');
+        const output=document.querySelector('.output');
+
+        function loactionPointer(e)
+        {
+              output.innerText=` OFFSET :${e.offsetX},${e.offsetY} 
+                                 VIEWPORT:${e.clientX},${e.clientY}
+                                  PAGE:${e.pageX},${e.pageY}
+                                   SCREEN:${e.screenX},${e.screenY}    
+                                 `
+        }
+
+        pointer.addEventListener("mousemove",loactionPointer);
+        pointer.addEventListener("mouseover",loactionPointer);
+        pointer.addEventListener("mouseleave",loactionPointer);
+        pointer.addEventListener("mouseup",loactionPointer);
+        pointer.addEventListener("mousedown",loactionPointer);
+
+
+
+    </script>
+</html>

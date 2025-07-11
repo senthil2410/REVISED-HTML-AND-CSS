@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>FormEvents</title>
+    </head>
+    <body>
+         <section>
+            <form method="get">
+               <label for="given-name" >Name :</label>
+               <input type="text" id="given-name" name="given-name" autocapitalize="on" autocomplete="given-name" onabort="">
+
+               <button>Submit</button>
+            </form>
+              
+            <form method="post">
+               <label for="given-name">Name :</label>
+               <input type="text" id="given-name" name="given-name" autocapitalize="words" autocomplete="given-name">
+
+               <button type="submit">Submit</button>
+            </form>
+                    
+              
+            <form method="get">
+               <label for="famuly-name">Name :</label>
+               <input type="text" id="family-name" name="family-name" autocapitalize="words" autocomplete="family-name" onblur="validateInput()">
+
+               <button>Submit</button>
+            </form>
+ 
+           <form method="post">
+               <label for="famuly-name">Name :</label>
+               <input type="text" id="family-name" name="family-name" autocapitalize="words" autocomplete="family-name">
+
+               <button>Submit</button>
+            </form>
+
+            <form method="get" onsubmit="validateCheck()">
+               <label for="cc-type">Name :</label>
+               <input type="text" id="cc-type" name="cc-type" autocapitalize="words" autocomplete="cc-type">
+
+               <button>Submit</button>
+            </form>
+
+
+
+
+         </section>
+    </body>
+
+    <script>
+
+           function validateCheck()
+           {
+                const name=document.getElementById('cc-type').value.trim();
+
+                if(name=='')
+                {
+                    event.preventDefault();
+                     alert("name is not endered");
+                     return false;
+
+                }
+                return true;
+
+                
+           }
+
+            function validateInput()
+           {
+                const name=document.getElementById('cc-type').value.trim();
+
+                if(name=='')
+                {
+                    event.preventDefault();
+                     alert ("name is not endered crctly");
+                     return false;
+    
+
+                }
+                return true;
+
+                
+           }
+ 
+           const handleSubmit=()=>
+           {
+              e.preventDefault();
+              alert("Form is Submitted Sucessfully")
+           }
+
+    </script>
+</html>
