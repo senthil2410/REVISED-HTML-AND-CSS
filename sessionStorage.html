@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session Storage</title>
+    </head>
+    <body>
+        <h2 class="storage"></h2>
+    </body>
+
+    <script>
+         const storage=document.querySelector('.storage');
+          sessionStorage.setItem("email","kumar@gmail.com");
+          sessionStorage.removeItem("email");
+          sessionStorage.setItem("email","senthil@gmail.com");
+          storage.textContent=localStorage.getItem("email");
+      
+    </script>
+    
+</html>
+
+
+

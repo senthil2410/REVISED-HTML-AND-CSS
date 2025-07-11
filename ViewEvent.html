@@ -6,11 +6,23 @@
     </head>
     <body>
                 <div>
-                <input type="text" id="username" name="username" > 
+                <input type="text" id="username" name="username" onchange="alert('Event losses focus after value getting changed')" > 
                 </div>
                 <div>
-                <input type="email" id="email" name="email" > 
+                <input type="email" id="email" name="email" oninput="alert('Event value getting cahnged')" > 
                 </div>
+              
+                <div id="chennai" class="place">
+                    <h1>Chennai is one of the biggest city </h1>
+                    <button type="button" id="button">change view</button>
+                </div>
+
+                <div id="mumbai" class="place" hidden >
+                    <h1>Mumbai is one of the biggest city </h1>
+                </div>
+
+
+
     </body>
     <script>
             const email=document.getElementById("email");
@@ -25,5 +37,16 @@
         {
             event.target.style.background="blue"
         })
+
+
+    
+
+        document.getElementById('button').addEventListener("click",()=>
+    {
+        document.getElementById('chennai').hidden=true;
+        document.getElementById('mumbai').hidden=false;
+    })
+
+         
     </script>
 </html>

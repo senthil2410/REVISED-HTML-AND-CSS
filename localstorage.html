@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage</title>
+    </head>
+    <body>
+        <h2 class="storage"></h2>
+    </body>
+
+    <script>
+         const storage=document.querySelector('.storage');
+          localStorage.setItem("email","Senthil@gmail.com");
+          localStorage.removeItem("email");
+          localStorage.setItem("email","Kumar@gamil.com");
+
+
+          storage.textContent=localStorage.getItem("email");
+ 
+    </script>
+    
+</html>
+
+
+
+
+
+
