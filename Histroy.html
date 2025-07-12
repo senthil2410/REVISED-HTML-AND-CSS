@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>History API</title>
+</head>
+<body>
+  <h1>History-API</h1>
+
+    <button id="back">Back</button>
+
+  <button id="forward">Forward</button>
+
+     <label for="number">Input</label>
+     <input type="number" id="number" />
+   <button id="btn">Go</button>
+
+  <script>
+    history.pushState({name:"senthil"}, "Users", "?user1");
+
+        history.pushState({name:"Kumar"}, "Users", "?user2");
+
+    history.pushState({name:"thangaraj"}, "Users", "?user3");
+
+   
+    console.log(history.length);
+
+    const back = document.getElementById("back");
+
+    const forward = document.getElementById("forward");
+
+    const btn = document.getElementById("btn");
+
+    const number = document.getElementById("number");
+
+    back.addEventListener("click", () => {
+      history.back();
+    });
+
+    forward.addEventListener("click", () => {
+      history.forward();
+    });
+
+    btn.addEventListener("click", () => {
+      const steps = Number(number.value);
+      if (Number.isNaN(steps)) {
+        alert("Please enter a valid number");
+        return;
+      }
+
+      if (steps === 0) {
+        alert("You entered 0 — no history navigation.");
+        return;
+      }
+
+      history.go(steps);
+    });
+
+    window.addEventListener("popstate", (event) => {
+      alert(`location: ${document.location}  and  State: ${JSON.stringify(event.state)}`);
+    });
+  </script>
+</body>
+</html>

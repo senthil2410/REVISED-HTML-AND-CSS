@@ -1,0 +1,39 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;;
+}
+
+body
+{
+    background-color: rgb(138, 211, 221);
+    height: 100vh;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+}
+
+
+h1{
+     font-weight: bold;
+     text-align: center;
+     color: dodgerblue;
+     padding: 8px;
+     margin-bottom: 8px;
+}
+
+.container
+{
+    height: 500px;
+    width: 450px;
+    background-color: rgb(226, 231, 231);
+     padding: 10px;
+}
+
+
+#para
+{
+    color: rgb(15, 17, 17);
+    
+}

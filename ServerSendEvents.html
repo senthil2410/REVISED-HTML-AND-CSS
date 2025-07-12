@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Server-Send-events</title>
+    </head>
+
+    <body>
+        <h1 >Time UPDATES</h1>
+        <div id="output"></div>
+
+
+
+      <script>
+
+        const events=new EventSource('http://localhost:3000/event');
+
+
+        events.onmessage= (event)=>
+      {
+        document.getElementById('output').innerText = event.data;
+      }
+
+        events.onerror= (event)=>
+      {
+        document.getElementById('output').innerText = 'ERROR';
+
+      }
+      </script>
+
+
+    </body>
+</html>

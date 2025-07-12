@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Elements</title>
+    </head>
+    <body>       
+      
+
+      <attendance-counter></attendance-counter>
+
+   
+  <script>
+class AttendanceCounter extends HTMLElement{
+  constructor(){
+    super()
+    this.count=0;
+
+        this.handleDecrease = () => this.updateCount(-1);
+    this.handleIncrease = () => this.updateCount(1);
+
+   
+  }
+
+  connectedCallback(){
+   
+    this.innerHTML=`
+      <button id="decrease">-</button>
+      <span id="count">${this.count}</span>
+      <button is="color-button" id="increase">+</button>`
+    this.decrease=this.querySelector('#decrease');
+    this.increase=this.querySelector('#increase');
+    this.cspan=this.querySelector('#count');
+
+    this.decrease.addEventListener("click",()=>this.handleDecrease());
+    this.increase.addEventListener("click",()=>this.handleIncrease());
+  }
+
+  disconnectedCallback(){
+   
+       this.decrease.removeEventListener("click",()=>this.updateCount(-1));
+    this.increase.removeEventListener("click",()=>this.updateCount(1));
+  }
+
+
+   static get observedAttributes(){
+    return ['count']
+  }
+  attributeChangedCallback(name, oldValue, newValue){
+    
+    if(name==='count'){
+      this.count=Number(newValue); 
+       this.cspan.textContent=this.count
+    }
+  }
+
+
+  updateCount(update){
+    this.count+=update
+    this.cspan.innerText=this.count
+    this.setAttribute('count', this.count)
+  }
+}
+customElements.define('attendance-counter', AttendanceCounter)
+
+
+class ColorButton extends HTMLButtonElement
+{
+    constructor()
+    {
+        super();
+        this.style.backgroundColor='red';
+    }
+    
+}
+customElements.define('color-button', ColorButton, { extends: 'button' });
+</script>
+</body>
+</html>
