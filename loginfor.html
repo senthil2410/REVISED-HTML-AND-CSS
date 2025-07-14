@@ -9,19 +9,28 @@
         <h1>Login Form</h1>
         </header>
         <main>
-        <form>
-            <div class="form-group">
-                <label for="username">Name </label>   
-                <input type="text" id="username" name="username" required> <br>
-                </div>
-                <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required> <br>
-                </div>
-                <div class="form-group">    
-                <label for="password">password</label>
-                <input type="password" id="password" name="password" required> <br>
-                </div>
+      
+    <form id="user-form" role="form" aria-label="User Registration Form">
+        <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" required aria-required="true">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+
+        <div class="form-group" aria-hidden="true">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required aria-required="true">
+        </div>
+
+       
+
+  <button type="submit">Register</button>
+</form>
+
                 
         </form>
         </main>

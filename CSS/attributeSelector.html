@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"   content="This document contain information about attribute selector">
+          <style>
+               input[type]
+               {
+                 border: 2px solid black;
+                 padding: 5px;
+                 margin: 5px;
+               }
+
+               input[type="text"]
+               {
+                   background-color: aquamarine;
+               }
+
+
+               a[href^="https"]
+               {
+                  background-color: aqua;
+                  margin-bottom: 10px;
+               }
+
+               a[target="_blank" ]
+               {
+                    color: blue;
+               }
+
+               img[src$="jpg"]
+               {
+                   margin: 10px;
+                   height: 400px;
+                   width: 400px;
+               }
+
+
+               input[type*="email"]
+               {
+                   border: 3px solid rgb(214, 18, 18);
+               }
+
+               p[title~="content"]
+               {
+                   color: chartreuse;
+               }
+
+               P[lang|="en"]
+               {
+                color: darkblue;
+               }
+          </style>
+    </head>
+    <body>
+        <form >
+
+            <input type="text"  name="name" id="name"  placeholder="Enter the name"> <br>
+
+            <input type="email"  name="email"  id="email"  placeholder="Enter the email"><br>
+
+            <a href="https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fmail%2f0%2f%3fnlp%3d0&sdf=0" id="link"  target="_blank" >link</a> <br>
+
+            <img src="/imgaes/favicon.jpg"   alt="favicon">
+
+            <p autocapitalize="words" title="Rough content">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Mollitia repellendus nam cumque quo alias dicta placeat maxime, reiciendis ab quia quod ipsam expedita quidem neque, eveniet earum, officia veniam laboriosam.</p>
+
+           <p lang="en-US">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti ut obcaecati ab magni perferendis, debitis sed voluptatem in. Ab recusandae praesentium vel minima incidunt iusto amet eligendi aliquid rem adipisci?</p>
+
+           
+        </form>
+    </body>
+</html>
+

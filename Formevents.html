@@ -23,7 +23,7 @@
               
             <form method="get">
                <label for="famuly-name">Name :</label>
-               <input type="text" id="family-name" name="family-name" autocapitalize="words" autocomplete="family-name" onblur="validateInput()">
+               <input type="text" id="family-name" name="family-name" autocapitalize="words" autocomplete="family-name"  onblur="validateInput()">
 
                <button>Submit</button>
             </form>
@@ -37,7 +37,7 @@
 
             <form method="get" onsubmit="validateCheck()">
                <label for="cc-type">Name :</label>
-               <input type="text" id="cc-type" name="cc-type" autocapitalize="words" autocomplete="cc-type">
+               <input type="text" id="cc-type" name="cc-type" autocapitalize="words" autocomplete="cc-type" onfocus="this.style.background='blue' " >
 
                <button>Submit</button>
             </form>
@@ -56,7 +56,7 @@
 
                 if(name=='')
                 {
-                    event.preventDefault();
+                    
                      alert("name is not endered");
                      return false;
 
@@ -68,11 +68,12 @@
 
             function validateInput()
            {
-                const name=document.getElementById('cc-type').value.trim();
+                   const input = document.getElementById('cc-type');
 
-                if(name=='')
-                {
-                    event.preventDefault();
+                   if (input.value.trim() === '') {
+                   {
+                 
+                        input.style.background = 'grey';
                      alert ("name is not endered crctly");
                      return false;
     
@@ -82,6 +83,7 @@
 
                 
            }
+         }
  
            const handleSubmit=()=>
            {

@@ -1,0 +1,35 @@
+#col
+{
+    column-count: 2;
+    background-color: aquamarine;
+    margin-bottom: 20px;
+}
+
+#col1
+{
+    column-width: 100px;
+    background-color: ivory;
+    margin-bottom: 20px;
+}
+
+#col2
+{
+    columns: 8em;
+    background-color: lightgray;
+    margin-bottom: 20px;
+}
+
+#col3
+{
+    columns: 10 8em;
+    overflow: scroll;
+     margin-bottom: 20px;
+     background-color: aqua;
+}
+
+#col4
+{
+    column-count: 5;
+    column-gap: 2em;
+     margin-bottom: 20px;
+}

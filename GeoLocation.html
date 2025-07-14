@@ -27,8 +27,8 @@
                }
                navigator.geolocation.getCurrentPosition((sucess)=>
               {
-                  const{latitude,longitude,accuracy}=sucess.coords;
-                  output.innerText=`the latitute is ${latitude} , longitute is ${longitude} and accuracy is ${accuracy}`;
+                  const{latitude,longitude,accuracy,speed}=sucess.coords;
+                  output.innerText=`the latitute is ${latitude} , longitute is ${longitude} and accuracy is ${accuracy}  and speed is ${speed}} `;
               },
             (err)=>
              {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description"   content="this document contains detais about the psuedo class">
+        <title>Pseudo-class</title>
+
+        <style>
+            #name:focus{
+                background-color: aqua;
+            }
+
+            button:hover{
+                
+                background-color: aquamarine;
+            }
+
+            #dept:checked +label
+            {
+                font-weight: bold;
+                color: blue;
+            }
+
+            ul li:last-child
+            {
+                color: rgb(138, 43, 226);
+            }
+
+          tr th:nth-child(odd)
+          {
+            background-color: aqua;
+
+          }
+
+
+
+        </style>
+        
+    </head>
+
+    <body>
+ 
+        <input type="text" name="name" id="name" class="name" placeholder="Please Enter your name"> <br>
+
+        <button id="submit" style="width: 300px ;padding: 10px;   margin: 10px;">Submit</button> <br>
+
+        <input type="checkbox" id="dept" name="dept">
+
+        <label for="dept">CSE</label> <br>
+
+        <input type="checkbox" id="dept1" name="dept"> 
+
+        <label for="dept1">ECE</label> <br>
+
+         <ul>
+            <li>APPLE</li>
+             <li>ORNAGE</li>
+              <li>Mango</li>
+              <li>Bannaa</li>
+         </ul>
+
+
+
+      <table  border="2px"  cellpadding="10px" cellspacing="10px">
+        <thead>
+            <tr>  
+                 <th>First period</th>    
+                <th>Second period</th>
+                <th>Third Period</th>
+                <th>Fourth Period</th>
+                <th>Fifth Period</th>
+                <th>Six period</th>
+                <th>Seventh period</th>
+            </tr>
+        </thead>
+       </table>
+
+    </body>
+</html>
