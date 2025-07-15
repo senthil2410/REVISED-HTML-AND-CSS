@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"   content="width=device-width,initial-scale=1.0">
+        <title>Drag and Drop</title>
+
+        <style>
+          #drag
+          {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            
+        
+          }
+
+          #dragcollect
+          {
+            background-color: bisque;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="drag" draggable="true">This page conatins content about the Drag and Drop Event</div>
+
+        <div id="dragcollect"></div>
+    </body>
+
+
+    <script>
+        const dragStart=document.getElementById("drag");
+
+        const dragEnd=document.getElementById("dragcollect");
+
+        dragStart.addEventListener("dragstart",(event)=>
+        {
+             event.dataTransfer.setData("text",event.target.id);
+        })
+
+        dragcollect.addEventListener("dragover",(event)=>
+       {
+              event.preventDefault();
+       })
+
+       dragcollect.addEventListener("drop",(event)=>
+    {
+        event.preventDefault();
+
+        const dragId=event.dataTransfer.getData("text");
+        const dragElement=document.getElementById(dragId);
+        dragcollect.appendChild(dragElement)
+
+    })
+
+
+
+    </script>
+</html>

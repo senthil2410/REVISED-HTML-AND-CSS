@@ -6,11 +6,11 @@
 
     <body>
         <header>
-        <h1>Login Form</h1>
+        <h1>Form</h1>
         </header>
-        <main>
+<main>
       
-    <form id="user-form" role="form" aria-label="User Registration Form">
+   <form id="user-form" role="form" aria-label="User Registration Form">
         <div class="form-group">
             <label for="username">Name</label>
             <input type="text" id="username" name="username" required aria-required="true">
@@ -26,14 +26,33 @@
             <input type="password" id="password" name="password" required aria-required="true">
         </div>
 
-       
+         <div class="form-group">
+                <label for="gender">Select Gender</label> <br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">male</label> <br>
+                 <input type="radio" id="female" name="gender" value="female">
+                <label for="female">female</label> <br>
+        </div>
+         <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="">--Select--</option>
+                    <option value="btech">B Tech</option>
+                    <option value="be">BE</option>
+                </select><br>
+         </div>
+                <div class="form-group">
+                <label for="adhaar">ID Proof</label> 
+                <input type="file" name="adhaar" id="adhaar" required> <br>
+        </div>
+                <button type="submit">Submit</button>
 
-  <button type="submit">Register</button>
-</form>
+       
+ </form>
 
                 
-        </form>
-        </main>
+     
+</main>
         <footer>
             <address>www.google.com</address>
         </footer>

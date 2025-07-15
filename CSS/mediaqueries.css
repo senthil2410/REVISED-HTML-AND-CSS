@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+header{
+    background-color: dimgray;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+
+
+nav {
+    max-width: 1200px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+   
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto; 
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+}
+
+@media(orientation: portrait)
+{
+    #nav ul
+    {
+        display: block;
+    }
+}
+
+@media(max-width:600px)
+{
+    body 
+    {
+        font-weight: bold;
+    }
+}
+
+@media (hover: hover)
+{
+    header:hover
+    {
+        background-color: lemonchiffon;
+        color: black;
+    }
+}
+
+@media(prefers-color-scheme: light)
+{
+    p
+    {
+        background-color:aliceblue;
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    p {
+        background-color: black;
+        color: white; 
+    }
+}
+
+
+@media(pointer: coarse)
+{
+    button 
+    {
+        padding: 10px;
+    }
+}
+
+
+
+@media (width<=20em) and(orientation:portrait)
+{
+    main 
+    {
+        background-color: aquamarine;
+    }
+}
+
+
+
+@media(pointer: fine)
+{
+    button 
+    {
+        background-color: blueviolet;
+        padding: 15px;
+        width:20%;
+         cursor: pointer;
+    
+        
+    }
+}
+
+
+@media print
+{
+    main 
+    {
+        background-color: aqua;
+    }
+}
+
+
+
