@@ -47,20 +47,20 @@ main
 
 
 @media (max-width: 768px) {
-    nav ul {
+    nav li {
         display: none;
     }
 }
 
-@media(orientation: portrait)
+@media (orientation: portrait)
 {
-    #nav ul
+    #nav 
     {
         display: block;
     }
 }
 
-@media(max-width:600px)
+@media (max-width:600px)
 {
     body 
     {
@@ -77,7 +77,7 @@ main
     }
 }
 
-@media(prefers-color-scheme: light)
+@media (prefers-color-scheme: light)
 {
     p
     {
@@ -93,7 +93,7 @@ main
 }
 
 
-@media(pointer: coarse)
+@media (pointer: coarse)
 {
     button 
     {
@@ -103,7 +103,7 @@ main
 
 
 
-@media (width<=20em) and(orientation:portrait)
+@media (max-width:20em) and(orientation:portrait)
 {
     main 
     {
@@ -134,6 +134,18 @@ main
         background-color: aqua;
     }
 }
+
+
+#accept-ratio{
+    color: rgb(201, 119, 18);
+    background-color: rgb(185, 14, 14) ;
+
+
+
+}
+
+
+
 
 
 

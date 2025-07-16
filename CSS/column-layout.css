@@ -1,8 +1,16 @@
 #col
 {
+
     column-count: 2;
     background-color: aquamarine;
     margin-bottom: 20px;
+    h1{
+        column-span: all;
+    } 
+}
+
+#col h1{
+    column-span: all;
 }
 
 #col1
@@ -25,6 +33,9 @@
     overflow: scroll;
      margin-bottom: 20px;
      background-color: aqua;
+     h1{
+        column-span: none;
+     }
 }
 
 #col4
@@ -32,4 +43,6 @@
     column-count: 5;
     column-gap: 2em;
      margin-bottom: 20px;
+     column-rule: 5px double orangered;
 }
+

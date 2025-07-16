@@ -1,0 +1,53 @@
+
+#static {
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+#relative {
+    position: relative;
+    top: 100px;   
+    left: 20px;  
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 20px;
+    background-color: #d0e7ff;
+}
+
+
+#sticky
+{
+    position: sticky;
+     padding: 50px;
+     background-color:aqua;
+     top: 50px;
+     width: 25%;
+    
+}
+
+
+
+#absolute {
+    position: absolute;
+    top: 100px;  
+    left: 50px;
+    width: 600px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #ffd0d0;
+    
+}
+
+
+#fixed
+{
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+

@@ -1,0 +1,137 @@
+
+.lists
+{
+    margin: 20px;
+    font-weight:bold;
+    margin-bottom: 20px;
+    background-color: rgb(189, 233, 218);
+     line-height: 1.4;
+}
+
+#day1
+{
+
+
+    font-style: italic;
+   text-decoration: underline;
+   text-transform: uppercase;
+   list-style-type:lower-alpha;
+}
+
+#day2
+{
+   font-style: oblique;
+   text-transform:capitalize;
+   list-style-type:lower-roman;
+   list-style-position: outside;
+}
+
+#day3
+{
+    text-decoration:overline;
+   text-transform:capitalize;
+   list-style-type:lower-roman;
+   list-style-position: inside;
+}
+
+
+#day4
+{
+    list-style-type: square;
+    list-style-image: url(/imgaes/small2.jpeg);
+    list-style-position: inside;
+}
+
+
+ul{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+
+#indoor,#outdoor
+{
+    list-style-type: circle;
+    list-style-position: outside;
+}
+
+
+
+a:link{
+    color: brown;
+}
+
+
+a:hover 
+{
+     color: rgb(43, 226, 67);
+     background-color:rgb(211, 240, 183)
+}
+
+a:focus 
+{
+    color:coral
+}
+
+a:visited
+{
+    color:red;
+    background-color: rgb(243, 189, 189);
+}
+a:active
+{
+    color:yellow;
+    background-color: rgb(255, 255, 206);
+}
+
+a[href$="html"]::after
+{
+    content:" " ;
+    display: inline-block;
+    width:0.8em;
+    height:0.8em;
+    margin: 0.25em;
+    background-size: 100%;
+    background-image: url("/imgaes/");
+
+}
+
+
+.container
+{
+    display: flex;
+    
+}
+
+.container a{
+    flex: 1;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.container a:link,
+a:visited,
+a:focus{
+    background-color: bisque;
+    color:black
+}
+
+.container a:hover 
+{
+  background-color: rgb(238, 155, 155);
+}
+
+.container a:active 
+{
+    background-color: black;
+    color:white
+}
+
+
+.container a.active 
+{
+    background-color: black;
+    color:white
+}

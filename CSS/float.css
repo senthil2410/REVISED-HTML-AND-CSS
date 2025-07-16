@@ -1,0 +1,61 @@
+.floatleft
+{
+    float: left;
+    background-color: bisque;
+    height: 100px;
+    margin: 40px;
+    width:200px; 
+    border: 2px solid violet;
+
+}
+
+
+
+
+.floatright
+{
+    float:right;
+    background-color: bisque;
+    height: 100px;
+    width:200px;
+}
+
+#para1
+{
+    background-color: aqua;
+    padding: 20px;
+}
+
+
+.floatclear
+{
+    float: inline-start;
+
+    background-color: rgb(146, 146, 236);
+    height: 100px;
+    width:200px;
+    padding: 20px;
+    margin: 30px;
+}
+
+#para2
+{
+     clear:left;
+}
+
+.float-root
+{
+    width: 100%;
+    background-color: aqua;
+    display: flow-root;
+}
+
+#floatroot
+{
+    float: left;
+    padding: 10px;
+    height: 120px;
+    width:500px;
+    background-color: rgb(5, 238, 5);
+    margin: 10px;
+}
