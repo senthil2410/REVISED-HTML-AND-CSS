@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="This file conatins details about HTML and CSS">
+    <meta name="author"   content="This file conatins details about HTML and CSS">
+    <link rel="icon" href="/imgaes/favicon.jpg" type="text/icon">
+    <meta name="og:image"  href="/imgaes/small2.jpeg">
+    <meta name="og:description"  content="This file conatin details about the HTML AND CSS">
+    <link rel="stylesheet"  href="index.css" >
+    
+    
+    <title>Practice HTML and CSS</title>
+</head>
+<body>
+
+
+ <header class="navbar">
+      <h1>Practicing HTML AND CSS</h1>
+    <nav>
+       <a href="/text.html" class="active">Text</a>
+       <a href="/Table.html" class="navbar">Table-Features</a>
+       <a href="/multimedia.html" class="navbar">Media</a>
+    </nav>
+ </header>
+
+   <div class="container">
+
+     <header class="news-papaer">
+           <h1>Flood in Chennai and its Surrounding Places</h1>
+     </header>
+
+     <main class="news-papaer">
+      <article>
+         <p> <h3 style="display: inline;">Chennai Whether Depeartment</h3> gives an alert that there will <strong>heavy</strong> rain  for the next 3 days.. So people should <em>Carful</em> during this period.
+              Some areas are alredy affect by flood on 27 <sup>th</sup> June  2025  and there is demand for Oxygen supply O<sub>2</sub>
+         </p>
+      </article>
+      <article>
+        <p> <blockquote> Lipsum dolor sit amet consectetur adipisicing elit. Quidem eligendi,
+          hic laborum enim iure omnis id cupiditate officia, illo sapiente eum magnam facere debitis
+           quasi nemo nisi, ex harum exercitationem!  </blockquote></p> 
+      </article>
+      <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Veritatis, laudantium ea quae similique accusamus ducimus ab totam,
+          sint voluptate esse nesciunt qui eum? Pariatur odit a quam itaque harum. Cum.
+         </p> 
+      </article>
+
+     </main>
+      <aside class="news-paper">
+        <h2>News Sections</h2>
+        <ul>
+          <li style="list-style-position: inside;">Sports</li>
+          <li style="list-style-position: inside;">Politics</li>
+          <li style="list-style-position: inside;">Cinema</li>
+          <li style="list-style-position: inside;">Chennai</li>
+        </ul>
+     </aside>
+
+
+     <Footer class="news-papaer">
+
+      <address>
+         <pre>@Times of India                                                                                                                                                                          17<sup>th</sup> June 2025</pre>
+      </address>
+
+     </Footer>
+   </div>
+
+   <div class="media">  
+         <div id="images">
+            <img srcset="/imgaes/place.jpg 400w,chennai.jpeg 800w"   src="chennai.jpeg" referrerpolicy="no-referrer" onload="alert('Image loadeded Sucessfully')">
+            <img  src="chennai1.jpeg"  title="Chennai"  referrerpolicy="origin"   width="500px" height="500px" onerror="alert('There is error while loading the image')">
+            <img  src="chennai1.jpeg"  title="Chennai"  referrerpolicy="origin"   width="500px" height="500px" loading="lazy">
+         </div>
+
+         <div id="videos">
+            <video controls preload="none" loop muted width="450px"  height="450px"  target="_blank" onabort="alert('Video laoding stopped at middle')"  src="https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2f/Making_snowman_in_K%C3%B5rvemaa%2C_Estonia_%28January_2022%29.webm/Making_snowman_in_K%C3%B5rvemaa%2C_Estonia_%28January_2022%29.webm.480p.vp9.webm" ></video>
+         </div>
+
+         <div id="audio">
+            <audio controls preload="none" muted loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"  type="mp3" target="_blank"></audio>
+         </div>
+         </div>
+   </div>
+
+
+   <table border="2px" cellpadding="10px" cellspacing="10px">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>F-Name</th>
+      <th>L-Name</th>
+      <th>Age</th>
+      <th>Mobile</th>
+      <th colspan="2" rowspan="2">Address</th>
+    </tr>
+   
+    <tr></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Senthil</td>
+      <td>Kumar T</td>
+      <td>23</td>
+      <td>9500784990</td>
+      <td colspan="2" rowspan="3">7/9-0 Ariam Nagar, Chennai DISTRICT..pincode:600001</td>
+    </tr>
+
+      <tr>
+      <td>2</td>
+      <td>Kumar</td>
+      <td>Senthil</td>
+      <td>24</td>
+      <td>9500733220</td>
+      
+    </tr>
+
+
+
+     <tr>
+      <td rowspan="4">3</td>
+      <td>Nitish</td>
+      <td>Kumar</td>
+      <td>24</td>
+      <td>9500733220</td>
+      
+    </tr>
+     
+  </tbody>
+</table>
+
+   <div class="links">
+     <a href="#images">images</a>
+     <a href="/Table.html">Table</a>
+     <a href="mailto:fake@gmail.com">Email</a>
+     <a href="tel:9500999999">mobile</a>
+     <a href="/GeoLocation.html" download >Download</a>
+   </div>
+
+
+    <div class="lists">
+        <ol id="ordered">
+            <li id="day1">Sunday</li>
+            <li id="day2">Monday</li>
+            <li id="day3">Tuesday</li>
+            <li id="day4">Wednesday</li>
+            <li id="day5">Thursday</li>
+            <li id="day6">Friday</li>
+
+            <li id="day7" value="8">Saturday</li>
+        </ol>
+
+         <ul>
+            <li>Bio-Tech</li>
+             <li>EIE</li>
+             <li>CSE</li>
+             <li>Bio-Medical</li>
+             <li>IT</li>
+         </ul>
+
+
+          <dl>
+            <dt>Name :</dt>
+              <dd>Senthil KUMAR T</dd>
+            <dt>Department</dt>
+              <dd>Electronics and Instrumentation Engineering</dd>
+            <dt>Roll No</dt>
+               <dd>201EI132</dd>
+          </dl>
+    </div>
+
+   <div class="i-frames">
+       <iframe  src="https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2f/Making_snowman_in_K%C3%B5rvemaa%2C_Estonia_%28January_2022%29.webm/Making_snowman_in_K%C3%B5rvemaa%2C_Estonia_%28January_2022%29.webm.480p.vp9.webm" width="400px"  height="400px" referrerpolicy="no-referrer">Video</iframe>
+   </div>
+
+     <!-- Form and Focus Event -->
+   <div class="forms">
+      <form method="get" onsubmit="validateCheck()">
+         <label for="fname">Name :</label>
+         <input type="text" id="fname" name="fname" >
+         <button>Submit</button>
+      </form>
+
+      <form method="get">
+        <label for="email" >Email :</label>
+        <input type="email" name="email" id="email" onblur="validateInput()">
+      </form>
+
+      <form method="get">
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password" onchange="changeInput()">
+      </form> 
+      
+      <form method="post">
+        <label for="phone">Phone :</label>
+        <input type="tel" name="phone"  id="phone" onfocus="this.style.background ='light-grey';">
+      </form>
+   </div>
+
+
+   <!-- Keyboard Events -->
+   <div class="keyboard">
+      <input type="text" id="keyboardvalue" name="keyboardvalue" aria-placeholder="type the content">
+  </div>
+   
+     <script src="index.js" defer></script>
+</body>
+</html>
