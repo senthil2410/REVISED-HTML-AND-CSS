@@ -200,3 +200,181 @@ ul>li{
     border-radius: 4px;
 }
 
+
+
+.keyboard
+{
+    min-width: 200px;
+    min-height: 200px;
+    padding: 15px;
+    margin: 10px 15px;
+    background-color: #bbb;
+    
+}
+
+#keyboardvalue
+{
+    padding: 10px;
+    margin: 10px auto;
+     align-items: center;
+     display: block;
+}
+
+.keyboard #output
+{
+    padding: 10px;
+    margin: 10px auto;
+     align-items: center;
+     display: block;
+     background-color: rgb(134, 134, 240);
+     color: aliceblue;
+     width: 20%;
+     text-align: center;
+}
+
+.mouse
+{
+    min-width: 300px;
+     min-height: 300px;
+     background-color: lightskyblue;
+     margin-top: 10px;
+}
+
+#mouseEvent
+{
+    background-color: aliceblue;
+    color: black;
+    height: 200px;
+    width: 400px;
+}
+
+#m-output
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.draganddrop
+{
+    background-color: khaki;
+    margin: 20px;
+    padding: 10px;
+    width:300px;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#draginput
+{
+    padding: 10px;
+    border: 2px solid rgb(236, 17, 17);
+    margin: 10px;
+    background-color: rgb(221, 107, 78);
+    color:white
+}
+
+#dropoutput
+{
+    padding: 10px;
+    border: 3px solid green;
+    min-width:100px;
+    background-color:rgb(160, 236, 160);
+    color: aliceblue;
+    margin: 10px;
+}
+
+
+.viewevents
+{
+    background-color: mediumslateblue;
+    margin: 15px;
+    padding: 10px;
+    width: 800px;
+    height:600px;
+}
+
+#view
+{
+    
+    line-height: 32px;
+    margin: 15px auto;
+    align-items: center;
+
+}
+
+.storage
+{
+    background-color: rgb(210, 248, 210);
+     margin: 10px;
+    max-width:650px;
+    min-height: 250px;
+    
+}
+.storage input{
+    padding: 10px;
+    display: block;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px rgb(0,0,0.6) ;
+}
+
+.storage button 
+{
+    padding: 10px;
+    margin: 10px;
+    width:200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px rgb(0,0,0.6) ;
+    background-color: lightslategray;
+
+}
+
+.cookies
+{
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.cookies button
+{
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.histroy
+{
+    background-color: wheat;
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.histroy button
+{
+    display:block;
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.histroy input
+{
+   width: 120px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
