@@ -332,6 +332,7 @@ ul>li{
     border-radius: 5px;
     box-shadow: 5px 10px 10px rgb(0,0,0.6) ;
     background-color: lightslategray;
+    cursor: pointer;
 
 }
 
@@ -350,6 +351,7 @@ ul>li{
     margin: 10px;
     align-items: center;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .histroy
@@ -368,6 +370,7 @@ ul>li{
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .histroy input
@@ -378,3 +381,43 @@ ul>li{
     border-radius: 5px;
 }
 
+
+.server
+{
+    background-color: rgb(202, 252, 252);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+.web-socket
+{
+    background-color: rgb(151, 173, 233);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+}
+
+#send
+{
+    width: 250px;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+
+#send-button
+{
+
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+
+}

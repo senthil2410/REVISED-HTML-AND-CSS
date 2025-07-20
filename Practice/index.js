@@ -178,6 +178,8 @@ function handleSubmit(event)
 //    console.log (sessionStorage.getItem());
 
  console.log(localStorage.getItem('name'));
+ document.getElementById('firstname').value=" "
+
 }
 
 
@@ -188,6 +190,7 @@ const setCookies=document.getElementById("setcookies");
 
 setCookies.addEventListener("click",()=>
 {
+    alert("SET COOKIES BUTTON IS CLICKED");
     document.cookie=`name=senthil_kumar;expires=Sun,2025-07-20 00:00:59 GMT;SameSite=Lax;path=/ `;
 })
 
@@ -249,3 +252,87 @@ events.onmessage = (event) => {
 events.onerror = (event) => {
   document.getElementById('output-time').innerText = 'ERROR';
 };
+
+
+//web-socket
+
+
+const sendata=document.getElementById("send");
+
+const receivedata=document.getElementById("receive");
+
+const sendbutton=document.getElementById("send-button");
+
+const webSocket=new WebSocket("wss://echo.websocket.events");
+
+
+webSocket.addEventListener("open",()=>
+{
+    receivedata.textContent="Connection started\n";
+});
+
+webSocket.addEventListener("message",(event)=>
+{
+    receivedata.textContent+=`Message received ${event.data}\n`;
+});
+
+webSocket.addEventListener("error",()=>
+{
+    receivedata.textContent+=`Error received\n`;
+});
+
+webSocket.addEventListener("close",()=>
+{
+    receivedata.textContent="Connection closed\n";
+});
+
+sendbutton.addEventListener("click",(event)=>
+{
+    const data=sendata.value;
+
+    if(webSocket.readyState==WebSocket.OPEN)
+    {
+        webSocket.send(data);
+        receivedata.textContent+=`Message send ${data}\n`;
+        sendata.value='';
+
+    }
+    else{
+        alert("The connection failed");
+}
+})
+
+
+// web-worker
+
+         const finput=document.getElementById('input1');
+
+         const sinput=document.getElementById('input2');
+
+         const output=document.getElementById('woutput');
+
+         
+         if(window.Worker)
+         {
+              const worker=new Worker('/Web-workers/worker.js');
+
+              [finput,sinput].forEach((input)=>
+            {
+                input.onchange=()=>
+             {
+                 worker.postMessage([finput.value,sinput.value]);
+
+                 
+             }
+            })
+
+            worker.onmessage =(event)=>
+
+            {
+                 console.log('received data:', event.data)
+                output.textContent= `Result is ${event.data}`;
+            }
+
+         }
+
+
