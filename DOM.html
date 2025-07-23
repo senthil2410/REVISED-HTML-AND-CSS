@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM- examples</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const p = document.createElement('p');
+        const text = document.createTextNode('This is example of DOM ');
+
+        p.appendChild(text);
+        p.setAttribute('id', 'para1');
+        p.style.color = 'green';
+        p.classList.add('para');
+        // 
+        container.appendChild(p);
+
+        container.addEventListener('click', (event) => {
+        if (event.target.id === 'para1') {
+            alert('para1 is clicked');
+            event.target.remove();
+        }
+        });
+
+    </script>
+    
+</body>
+</html>

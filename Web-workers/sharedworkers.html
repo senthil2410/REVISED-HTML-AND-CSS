@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Worker</title>
+</head>
+<body>
+      <h2>Shared Worker</h2>
+  <input type="text" id="messageInput" placeholder=" message">
+
+  <button id="sendBtn">Send</button>
+
+  <div id="log"></div>
+
+  <script>
+
+    const worker = new SharedWorker('shared-worker.js');
+
+    const input = document.getElementById('messageInput');
+    const log = document.getElementById('log');
+
+
+    worker.port.start();
+
+
+    document.getElementById('sendBtn').onclick = () => {
+      const msg = input.value;
+      worker.port.postMessage(msg);
+    };
+
+    worker.port.onmessage = (event) => {
+      const p = document.createElement('p');
+      p.textContent = 'Messages received from workers ' + event.data;
+      log.appendChild(p);
+    };
+  </script>
+</body>
+</html>

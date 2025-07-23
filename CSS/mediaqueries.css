@@ -68,6 +68,7 @@ main
     }
 }
 
+
 @media (hover: hover)
 {
     header:hover
@@ -91,6 +92,7 @@ main
         color: white; 
     }
 }
+
 
 
 @media (pointer: coarse)
@@ -136,13 +138,6 @@ main
 }
 
 
-#accept-ratio{
-    color: rgb(201, 119, 18);
-    background-color: rgb(185, 14, 14) ;
-
-
-
-}
 
 
 
